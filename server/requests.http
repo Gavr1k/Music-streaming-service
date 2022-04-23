@@ -1,4 +1,18 @@
 @hostname = http://localhost:3000
+###----------------------------------
 
-#test 404 not found error
+###test 404 not found error
 get {{hostname}}/users
+
+###register user
+post {{hostname}}/register
+Content-Type: application/json
+
+{
+  "username": "artem",
+  "email": "artemgei@mail.ru",
+  "password": "artemdebildd",
+  "passwordCheck": "artemdebildd",
+}
+
+

@@ -2,9 +2,9 @@ const { errorResponseFormat } = require("../utils/responseFormatHelper");
 
 /**
  * Middleware function that controls 404 not found errors
- * @param {*} req - request
- * @param {*} res - response
- * @param {*} next - function, midlleware next
+ * @param {object} req - request
+ * @param {object} res - response
+ * @param {function} next - function, midlleware next
  */
 function notFoundError(req, res, next) {
   const error = new Error(`${req.url} not found`);
@@ -14,10 +14,10 @@ function notFoundError(req, res, next) {
 
 /**
  * Middleware function that catches server errors
- * @param {*} error - contains error
- * @param {*} req - request from client
- * @param {*} res  - response to server
- * @param {*} next - funtcion, midlleware next
+ * @param {Object} error - contains error
+ * @param {Object} req - request from client
+ * @param {object} res  - response to server
+ * @param {function} next - funtcion, midlleware next
  * @returns response object
  */
 function errorHandler(error, req, res, next) {
